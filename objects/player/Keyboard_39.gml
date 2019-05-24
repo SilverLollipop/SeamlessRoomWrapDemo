@@ -1,3 +1,1 @@
-x += move_speed
-
-if (x > room_width) x -= room_width
+hspeed += move_speed

@@ -23,13 +23,13 @@ enum SideFlags {
 
 var proj = matrix_build_projection_ortho(WIDTH, HEIGHT, 0, 32000)
 
-main_camera = camera_create_view(0, 0, WIDTH, HEIGHT, 0, -1, 0, 0, 64, 64)
+main_camera = camera_create_view(0, 0, WIDTH, HEIGHT, 0, -1, 0, 0, 0, 0)
 camera_set_proj_mat(main_camera, proj)
 
 for(var i = 0; i < 4; i++) {
+	view_camera_side[i] = SideFlags.none
 	corner_cameras[i] = camera_create_view(0, 0, WIDTH, HEIGHT, 0, -1, 0, 0, 0, 0)
 	camera_set_proj_mat(corner_cameras[i], proj)
 	edge_cameras[i] = camera_create_view(0, 0, WIDTH, HEIGHT, 0, -1, 0, 0, 0, 0)
 	camera_set_proj_mat(edge_cameras[i], proj)
 }
-
