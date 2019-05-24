@@ -1,3 +1,1 @@
-y -= move_speed
-
-if (y < 0) y += room_height
+vspeed -= move_speed
